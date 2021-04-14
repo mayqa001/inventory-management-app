@@ -51,6 +51,7 @@ exports.getProductById = async (id) => {
 exports.addProduct = async (body) => {
   try {
     const products = await Product.create(body);
+    
     return products;
   } catch (err) {
     // Log Errors
@@ -86,7 +87,7 @@ exports.updateProduct = async (param, data) => {
   }
 };
 
-//done
+//Andy
 exports.getProductByCategory = async (category) => {
   console.log('running getProductByCategory' + '\n\n\n\n');
   try {
@@ -105,7 +106,8 @@ exports.getProductByCategory = async (category) => {
     throw Error(err);
   }
 };
-//done
+
+//Andy
 exports.getProductByName = async (productName) => {
   try {
     console.log('running getProductByName' + '\n\n\n\n');
@@ -119,7 +121,8 @@ exports.getProductByName = async (productName) => {
     throw Error(err);
   }
 };
-//done
+
+//Andy
 exports.getProductByBrand = async (brandName) => {
   try {
     console.log('running getProductByBrand' + '\n\n');

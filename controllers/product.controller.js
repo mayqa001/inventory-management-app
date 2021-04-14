@@ -23,9 +23,14 @@ exports.getProducts = async (req, res, next) => {
     return res.status(400).json({ status: 400, message: err.message });
   }
 };
-exports.addProduct = async (req, res, next) => {
+exports.addProduct =  async (req, res, next) => {
+  console.log("addProduct is called");
   try {
-    const products = await ProductService.addProduct(req.body);
+    
+    const input =  req.body;
+    console.log("input: " + input);
+    const products = await ProductService.addProduct(input);
+
     return res.status(200).json({
       status: 200,
       data: products,
@@ -48,6 +53,7 @@ exports.deleteProduct = async (req, res, next) => {
   }
 };
 
+//Andy
 exports.updateProduct = async (req, res, next) => {
   try {
     const products = await ProductService.updateProduct(
@@ -64,6 +70,7 @@ exports.updateProduct = async (req, res, next) => {
   }
 };
 
+//Andy
 exports.getProductByCategory = async (req, res, next) => {
   try {
     const products = await ProductService.getProductByCategory(
@@ -79,6 +86,7 @@ exports.getProductByCategory = async (req, res, next) => {
   }
 };
 
+//Andy
 exports.getProductByName = async (req, res, next) => {
   try {
     const products = await ProductService.getProductByName(req.params.name);

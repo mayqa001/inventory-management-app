@@ -24,6 +24,7 @@
   "homepage": "https://github.com/kevin-aminzadeh/inventory-management-app#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
     "bootstrap": "^5.0.0-beta3",
     "chart.js": "^2.9.4",
     "connect-session-sequelize": "^7.1.1",
@@ -32,6 +33,7 @@
     "express-handlebars": "^5.2.1",
     "express-session": "^1.17.1",
     "handlebars": "^4.7.7",
+    "jquery": "^3.6.0",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2"
   },
