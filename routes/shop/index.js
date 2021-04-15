@@ -4,7 +4,10 @@ const router = require('express').Router();
 
 // Configure Shop Child Routes
 router.get('/', (req, res) => {
-  res.render('shop/home');
+  res.render('dashboard/home', {
+    layout: 'dashboard',
+    currentRoute: req.baseUrl,
+  });
 });
 
 module.exports = router;
